@@ -22,60 +22,47 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:src="@drawable/notif"/>
-
-    <LinearLayout
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textSize="25dp"/>
-        <EditText
-            android:layout_marginLeft="30dp"
+    android:src="@drawable/notif" />
+    <EditText
+            android:background="@drawable/edit_text_style"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_height="45dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="25dp"
-            android:id="@+id/login_form"/>
-    </LinearLayout>
-
-    <LinearLayout
-
-        android:layout_marginBottom="30dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/password"
-            android:textSize="25dp"/>
+            android:hint="@string/login"
+            android:id="@+id/login_form" />
         <EditText
-            android:layout_marginLeft="30dp"
+            android:layout_height="45dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_text_style"
             android:id="@+id/password_form"/>
-    </LinearLayout>
-    <Button
-
-        android:layout_width="wrap_content"
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/sing_in"
-        android:textSize="30dp"
+        android:textSize="25dp"
+        android:background="@drawable/button_add_style"
+        android:textColor="@android:color/white"
         android:onClick="sing_in"/>
     <TextView
+        android:textColor="@android:color/white"
         android:layout_marginTop="20dp"
         android:text="@string/sing_up"
         android:textSize="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
+        android:background="@drawable/button_add_style"
         android:onClick="sing_up"/>
 </LinearLayout>
 

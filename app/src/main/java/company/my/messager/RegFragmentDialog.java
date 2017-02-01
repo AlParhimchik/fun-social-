@@ -4,16 +4,21 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -45,7 +50,7 @@ public class RegFragmentDialog extends AlertDialog  implements View.OnClickListe
         first_name_form=(EditText)view.findViewById(R.id.first_name); first_name_form.setOnFocusChangeListener(this);
         last_name_form=(EditText)view.findViewById(R.id.last_name); last_name_form.setOnFocusChangeListener(this);
         phone_form=(EditText)view.findViewById(R.id.phone); phone_form.setOnFocusChangeListener(this);
-        ((Button)view.findViewById(R.id.reg_button)).setOnClickListener(this);
+        ((TextView)view.findViewById(R.id.reg_button)).setOnClickListener(this);
         setTitle(R.string.sing_up);
     }
     @Override
@@ -88,4 +93,5 @@ public class RegFragmentDialog extends AlertDialog  implements View.OnClickListe
         InputMethodManager inputMethodManager =(InputMethodManager)ctx.getSystemService(Activity.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
+
 }

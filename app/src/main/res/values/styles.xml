@@ -16,7 +16,11 @@
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/RegistrationDialogAnimation</item>
     </style>
-
+    <style name="RegistrationDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_right</item>
+    </style>
 </resources>
 
