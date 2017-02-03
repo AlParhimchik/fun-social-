@@ -11,7 +11,6 @@ public abstract  class Person implements BaseColumns
     public static final String TABLE_NAME ="persons";
     public static final String COLUMN_NAME_LOGIN="login";
     public static final String COLUMN_NAME_PASSWORD="password";
-    public static final String COLUMN_NAME_PHONE ="phone";
     public static final String COLUMN_NAME_FIRST_NAME="first";
     public static final String COLUMN_NAME_LAST_NAME="last";
 }

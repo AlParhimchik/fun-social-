@@ -34,7 +34,7 @@ public class RegFragmentDialog extends AlertDialog  implements View.OnClickListe
     public final String DB_NAME="db_users.db";
     public final String CREATE_DB="CREATE TABLE IF NOT EXISTS "+ Person.TABLE_NAME +
             " (_id integer primary key autoincrement,"+ Person.COLUMN_NAME_PASSWORD+","+ Person.COLUMN_NAME_LOGIN+","
-            + Person.COLUMN_NAME_FIRST_NAME+","+ Person.COLUMN_NAME_LAST_NAME+","+ Person.COLUMN_NAME_PHONE+")";
+            + Person.COLUMN_NAME_FIRST_NAME+","+ Person.COLUMN_NAME_LAST_NAME+")";
 
     protected RegFragmentDialog(Context context)
     {
@@ -70,7 +70,6 @@ public class RegFragmentDialog extends AlertDialog  implements View.OnClickListe
             new_user.put(Person.COLUMN_NAME_PASSWORD, pass_form.getText().toString());
             new_user.put(Person.COLUMN_NAME_FIRST_NAME, first_name_form.getText().toString());
             new_user.put(Person.COLUMN_NAME_LAST_NAME, last_name_form.getText().toString());
-            new_user.put(Person.COLUMN_NAME_PHONE, phone_form.getText().toString());
             chatDBlocal.insert(Person.TABLE_NAME, null, new_user);
             Log.i("TAG", "user added");
             Intent intent=new Intent(ctx,MainActivity.class);

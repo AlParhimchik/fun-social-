@@ -6,7 +6,7 @@ package company.my.messager;
 
 public class User
 {
-    public String  login,password,phone,first_name,last_name;
+    public String  login,password,first_name,last_name;
     User()
     {
 

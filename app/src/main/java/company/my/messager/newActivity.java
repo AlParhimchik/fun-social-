@@ -16,28 +16,21 @@ import android.widget.TextView;
 
 public class newActivity extends AppCompatActivity
 {
-    SharedPreferences mSettings;
     User cur_user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_users);
-        mSettings = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-        cur_user=new User();
-        cur_user.first_name=mSettings.getString(Person.COLUMN_NAME_FIRST_NAME,"");
-        cur_user.last_name=mSettings.getString(Person.COLUMN_NAME_LAST_NAME,"");
-        cur_user.password=mSettings.getString(Person.COLUMN_NAME_PASSWORD,"");
-        cur_user.login=mSettings.getString(Person.COLUMN_NAME_LOGIN,"");
-        cur_user.phone=mSettings.getString(Person.COLUMN_NAME_PHONE,"");
-
+        storeUserDate();
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-//        myToolbar.setTitle(cur_user.first_name+" "+ cur_user.last_name);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         TextView mTitle = (TextView) myToolbar.findViewById(R.id.toolbar_title);
         mTitle.setText(cur_user.first_name+" "+cur_user.last_name);
+
+
     }
 
     @Override
@@ -63,5 +56,15 @@ public class newActivity extends AppCompatActivity
             finish();
         }
         return true;
+    }
+
+    public  void storeUserDate()
+    {
+        SharedPreferences mSettings = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        User cur_user=new User();
+        cur_user.first_name=mSettings.getString(Person.COLUMN_NAME_FIRST_NAME,"");
+        cur_user.last_name=mSettings.getString(Person.COLUMN_NAME_LAST_NAME,"");
+        cur_user.password=mSettings.getString(Person.COLUMN_NAME_PASSWORD,"");
+        cur_user.login=mSettings.getString(Person.COLUMN_NAME_LOGIN,"");
     }
 }

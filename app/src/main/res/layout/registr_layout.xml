@@ -50,17 +50,6 @@
         android:layout_width="match_parent"
         android:hint="@string/password"
         android:id="@+id/password_form_reg" />
-    <EditText
-        android:background="@drawable/edit_text_style"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_height="45dp"
-        android:layout_width="match_parent"
-        android:hint="@string/phone_number"
-        android:id="@+id/phone" />
-
     <LinearLayout
        android:layout_margin="20dp"
         android:layout_width="match_parent"
